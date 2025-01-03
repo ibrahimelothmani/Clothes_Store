@@ -4,8 +4,6 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   server: {
-    hmr: {
-      overlay: false, // Disable error overlay if you prefer
-    },
-  },
+    port: 3000
+  }
 });
