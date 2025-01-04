@@ -5,6 +5,7 @@ import Login from "./components/Login.jsx";
 import Contact from "./components/Contact.jsx";
 import Register from "./components/Register.jsx";
 import Paiement from "./components/Paiement.jsx";
+import Success from "./components/Success.jsx";
 import Footer from "./components/Footer.jsx";
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/payment" element={<Paiement />} />
+        <Route path="/success" element={<Success />} />
       </Routes>
       <Footer />
     </Router>

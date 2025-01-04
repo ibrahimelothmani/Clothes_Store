@@ -4,20 +4,15 @@ import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
     axios.get("https://fakestoreapi.com/products")
       .then((response) => {
         setProducts(response.data);
-        setLoading(false);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
-        setError(error);
-        setLoading(false);
       });
   }, []);
 
@@ -25,8 +20,6 @@ const Home = () => {
     navigate('/payment', { state: { product } });
   };
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error loading products. Please try again later.</div>;
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
