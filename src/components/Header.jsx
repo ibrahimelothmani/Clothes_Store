@@ -1,5 +1,4 @@
-
-import useContext from 'react';
+import { useContext } from 'react'; // Correct import statement
 import { Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 
@@ -12,6 +11,16 @@ const Header = () => {
         <Link to="/">Clothes Store</Link>
       </h1>
       <nav className="flex items-center gap-4">
+        <button>
+        <Link to="/contact" className="bg-blue-500 px-3 py-1 rounded hover:bg-blue-600">
+              Contact Us
+            </Link>
+        </button>
+        <button>
+        <Link to="/register" className="bg-blue-500 px-3 py-1 rounded hover:bg-blue-600">
+              Register
+            </Link>
+        </button>
         {user ? (
           <>
             <span>Welcome, {user.name}</span>

@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from './firebase';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -9,9 +8,11 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
+      const auth = getAuth(); // Create an instance of getAuth
       await signInWithEmailAndPassword(auth, email, password);
+      console.log("User logged in successfully");
     } catch (error) {
-      console.error(error);
+      console.error("Error during login:", error);
     }
   };
 
