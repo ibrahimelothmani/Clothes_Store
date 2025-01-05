@@ -1,4 +1,5 @@
-Awesome React + Vite Setup 🚀
+React Project  🚀
+
 Welcome to your React + Vite template repository! This setup provides a minimal yet powerful way to get React up and running with Vite, HMR, and some ESLint rules. Perfect for rapid development and high performance.
 
 Features ✨
