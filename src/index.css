@@ -2,7 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-
 #success {
-    margin-top: 8rem;
+  margin-top: 8rem;
+}
+
+form {
+  border: 2px solid rgb(168, 156, 25);
+  border-radius: 5px 5px;
+  text-align: center;
+  margin-top: 2rem;
+  margin: 2rem;
 }
